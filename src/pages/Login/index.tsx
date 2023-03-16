@@ -1,15 +1,25 @@
 import BoxLogin from "components/BoxLogin";
-import { Route } from "react-router-dom";
+import { useState } from "react";
+import { Route, useNavigate } from "react-router-dom";
+import { RoutePath } from "types/routes";
 import * as S from "./style";
 
 const Login = () => {
-    return(
-        <S.Login>
-            <S.LoginContent>
-                <BoxLogin />
-            </S.LoginContent>
-        </S.Login>
-    );
-}
+  const [errorMessage, setErrorMessage] = useState("");
 
-export default Login
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate(RoutePath.HOME);
+  };
+
+  return (
+    <S.Login>
+      <S.LoginContent>
+        <BoxLogin onSubmitData={handleSubmit} errorMessage={errorMessage} />
+      </S.LoginContent>
+    </S.Login>
+  );
+};
+
+export default Login;
