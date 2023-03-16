@@ -102,6 +102,8 @@ const Home = () => {
       {proceedToPayment && (
         <Overlay>
           <CheckoutSection
+          orders={orders}
+          onOrdersChange={(data) => setOrders(data)}
           onCloseSection={() => setProceedToPayment(false)}
           />
         </Overlay>
