@@ -15,7 +15,6 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <Router />
         </QueryClientProvider>
-
       </BrowserRouter>
     </ThemeProvider>
   );

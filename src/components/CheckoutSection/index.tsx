@@ -109,7 +109,6 @@ const CheckoutSection = ({
                 </S.PaymentFormHalf>
               </>
             )}
-            
           </S.PaymentForm>
         </S.CheckoutSectionPaymentForm>
         <S.PaymentActions>

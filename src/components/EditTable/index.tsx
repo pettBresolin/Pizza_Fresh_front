@@ -16,13 +16,8 @@ const EditTable = () => {
 
       <>
         <label htmlFor="tableId">Numero da mesa</label>
-        <S.EditForm 
-        id='tableId'
-        type='number'
-        placeholder="01"
-        />
+        <S.EditForm id="tableId" type="number" placeholder="01" />
         <S.Deletar>Deletar mesa</S.Deletar>
-        
       </>
     </S.EditTable>
   );

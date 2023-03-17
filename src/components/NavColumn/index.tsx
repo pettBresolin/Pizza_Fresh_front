@@ -14,7 +14,6 @@ type NavColunProps = {
 } & NavcolumnType;
 
 const NavColumn = ({ activeRoute }: NavColunProps) => {
-  
   const navigate = useNavigate();
 
   const items = [

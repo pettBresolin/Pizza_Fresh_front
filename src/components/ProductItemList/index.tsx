@@ -12,11 +12,9 @@ const ProductItemList = ({ children, onSelectTable }: ProductItemListProps) => {
           Escolha os sabores.
         </S.ProductItemListHeaderTitle>
         <S.ProductItemListHeaderSelect
-        
-        onChange={({target}) => onSelectTable(Number(target.value))}
-        name="table"
-        id="table"
-
+          onChange={({ target }) => onSelectTable(Number(target.value))}
+          name="table"
+          id="table"
         >
           <option value="default">Selecione a mesa</option>
           <option value="01">Mesa 01</option>

@@ -1,27 +1,26 @@
-import { ReactComponent as Pencil } from "assets/icons/edit.svg"
+import { ReactComponent as Pencil } from "assets/icons/edit.svg";
 import * as S from "./style";
 
 const EditUser = () => {
-    return (
-        <S.EditUser>
-            <>
-            <S.EditUserDetails>
-                <S.EditUserDetailsImageWrap>
-                    <S.EditUserDetailsImage src="" alt="Foto do " />
-                </S.EditUserDetailsImageWrap>
-                <S.EditUserDetailsTitle>Nome</S.EditUserDetailsTitle>
-                <S.EditUserDetailsText>
-                    <b>Usuáro: </b> {/* usuario */}
-                </S.EditUserDetailsText>
-            </S.EditUserDetails>
-            
-            <S.EditUserAction>
-                <Pencil /> Editar
-            </S.EditUserAction>
-           
-            </>
+  return (
+    <S.EditUser>
+      <>
+        <S.EditUserDetails>
+          <S.EditUserDetailsImageWrap>
+            <S.EditUserDetailsImage src="" alt="Foto do " />
+          </S.EditUserDetailsImageWrap>
+          <S.EditUserDetailsTitle>Nome</S.EditUserDetailsTitle>
+          <S.EditUserDetailsText>
+            <b>Usuáro: </b> {/* usuario */}
+          </S.EditUserDetailsText>
+        </S.EditUserDetails>
 
-            <S.EditFormGroup>
+        <S.EditUserAction>
+          <Pencil /> Editar
+        </S.EditUserAction>
+      </>
+
+      <S.EditFormGroup>
         <S.EditForm type="text" placeholder="Nome" />
         <S.EditForm type="text" placeholder="Nome de Usuário" />
         <S.EditForm type="password" placeholder="Senha" />
@@ -30,7 +29,6 @@ const EditUser = () => {
 
         <S.Delete>Deletar</S.Delete>
       </S.EditFormGroup>
-
-        </S.EditUser>
-    )
-}
+    </S.EditUser>
+  );
+};

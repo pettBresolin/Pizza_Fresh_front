@@ -13,18 +13,12 @@ const Router = () => {
       <Route path={RoutePath.LOGIN} element={<Login />} />
       <Route path={RoutePath.HOME} element={<Home />} />
       <Route path={RoutePath.SETTINGS} element={<Settings />}>
-        <Route 
-          path={RoutePath.SETTINGS_TABLES} 
-          element={<ManageTables />} 
-        />
+        <Route path={RoutePath.SETTINGS_TABLES} element={<ManageTables />} />
         <Route
           path={RoutePath.SETTINGS_PRODUCTS}
           element={<ManageProducts />}
         />
-        <Route 
-          path={RoutePath.SETTINGS_USERS} 
-          element={<ManageUsers />} 
-        />
+        <Route path={RoutePath.SETTINGS_USERS} element={<ManageUsers />} />
       </Route>
     </Routes>
   );

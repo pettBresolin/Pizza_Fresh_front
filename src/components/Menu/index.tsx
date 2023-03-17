@@ -19,19 +19,18 @@ const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {
 
         {navItems.map((item, index) => (
           <S.MenuItem key={`MenuItem-${index}`} active={item.path === active}>
-
-            <S.MenuItemButton 
-            active={item.path === active}
-            onClick= {() => onNavigate(item.path)}
+            <S.MenuItemButton
+              active={item.path === active}
+              onClick={() => onNavigate(item.path)}
             >
-            {item.icon}
-          </S.MenuItemButton>
-      </S.MenuItem>
-      ))}
-    </nav>
-    
-    <S.MenuItemLogout onClick={onLogout}>
-      <Logout />
+              {item.icon}
+            </S.MenuItemButton>
+          </S.MenuItem>
+        ))}
+      </nav>
+
+      <S.MenuItemLogout onClick={onLogout}>
+        <Logout />
       </S.MenuItemLogout>
     </S.Menu>
   );

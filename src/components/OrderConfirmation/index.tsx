@@ -4,7 +4,6 @@ import OrderItemList from "components/OrderItemList";
 import { OrderItemType } from "types/OrderItemType";
 import * as S from "./style";
 
-
 type OrderConfirmationType = HTMLAttributes<HTMLDivElement>;
 
 type OrderConfirmationProps = {

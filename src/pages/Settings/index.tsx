@@ -8,7 +8,7 @@ import * as S from "./style";
 const Settings = () => {
   const navigate = useNavigate();
   const handleNavigation = (path: RoutePath) => navigate(path);
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   const splitterPath = (path: string) => path.split("/").pop() as RoutePath;
   const path = splitterPath(pathname);
