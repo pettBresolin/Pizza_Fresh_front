@@ -3,7 +3,7 @@ import OrderItem from "components/OrderItem";
 import OrderItemList from "components/OrderItemList";
 import { OrderItemType } from "types/OrderItemType";
 import * as S from "./style";
-import { isTemplateExpression } from "typescript";
+
 
 type OrderConfirmationType = HTMLAttributes<HTMLDivElement>;
 
