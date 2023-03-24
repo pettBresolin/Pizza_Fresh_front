@@ -4,37 +4,52 @@ import { Product, ProductResponse, ProductUpdate } from "types/api/product";
 
 export const ProductService = {
   getLista: (): Promise<ProductResponse[]> =>
-    Api(endpoint.listProducts(), {
-      method: "GET",
+    Api({
+      url: endpoint.listProducts(),
+      config: {
+        method: "GET",
+      },
     }).then((response) => response.json()),
 
   create: (product: Product) =>
-    Api(endpoint.createProduct(), {
-      method: "POST",
-      body: JSON.stringify(product),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
+    Api({
+      url: endpoint.createProduct(),
+      config: {
+        method: "POST",
+        body: JSON.stringify(product),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
     }).then((response) => response.json()),
 
   getById: (id: string) =>
-    Api(endpoint.productById(id), {
-      method: "GET",
+    Api({
+      url: endpoint.productById(id),
+      config: {
+        method: "GET",
+      },
     }).then((response) => response.json()),
 
   updateById: ({ product, id }: ProductUpdate) =>
-    Api(endpoint.productById(id), {
-      method: "PATCH",
-      body: JSON.stringify(product),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
+    Api({
+      url: endpoint.productById(id),
+      config: {
+        method: "PATCH",
+        body: JSON.stringify(product),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
     }).then((response) => response.json()),
 
   deleteById: (id: string) =>
-    Api(endpoint.productById(id), {
-      method: "DELETE",
+    Api({
+      url: endpoint.productById(id),
+      config: {
+        method: "DELETE",
+      },
     }).then((response) => response.json()),
 };

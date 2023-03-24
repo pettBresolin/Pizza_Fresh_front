@@ -9,12 +9,15 @@ export const OrderService = {
       productId: product.id,
     }));
 
-    return Api(endpoint.createOrder(), {
-      method: "POST",
-      body: JSON.stringify({ ...order, products }),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
+    return Api({
+      url: endpoint.createOrder(),
+      config: {
+        method: "POST",
+        body: JSON.stringify({ ...order, products }),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
     }).then((response) => response.json());
   },

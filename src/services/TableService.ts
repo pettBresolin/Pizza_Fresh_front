@@ -5,37 +5,52 @@ import { Table, TableResponse } from "types/api/table";
 
 export const TableService = {
   getLista: (): Promise<TableResponse[]> =>
-    Api(endpoint.listTables(), {
-      method: "GET",
+    Api({
+      url: endpoint.listTables(),
+      config: {
+        method: "GET",
+      },
     }).then((response) => response.json()),
 
   create: (table: Table) =>
-    Api(endpoint.createTable(), {
-      method: "POST",
-      body: JSON.stringify(table),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
+    Api({
+      url: endpoint.createTable(),
+      config: {
+        method: "POST",
+        body: JSON.stringify(table),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
     }).then((response) => response.json()),
 
   getById: (id: string) =>
-    Api(endpoint.tableById(id), {
-      method: "GET",
+    Api({
+      url: endpoint.tableById(id),
+      config: {
+        method: "GET",
+      },
     }).then((response) => response.json()),
 
   updateById: (table: TableResponse): Promise<TableResponse & ErrorResponse> =>
-    Api(endpoint.tableById(table.id), {
-      method: "PATCH",
-      body: JSON.stringify({ number: table.number }),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
+    Api({
+      url: endpoint.tableById(table.id),
+      config: {
+        method: "PATCH",
+        body: JSON.stringify({ number: table.number }),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
     }).then((response) => response.json()),
 
   deleteById: (id: string) =>
-    Api(endpoint.tableById(id), {
-      method: "DELETE",
+    Api({
+      url: endpoint.tableById(id),
+      config: {
+        method: "DELETE",
+      },
     }).then((response) => response.json()),
 };

@@ -32,3 +32,5 @@ const EditUser = () => {
     </S.EditUser>
   );
 };
+
+export default EditUser;
