@@ -1,4 +1,4 @@
-export const NormalizeUtils = (str: string) =>
+const NormalizeUtils = (str: string) =>
   str
     .toLowerCase()
     .normalize("NFD")
