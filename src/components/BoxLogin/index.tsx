@@ -21,7 +21,7 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
   return (
     <S.BoxLogin>
       <S.BoxLoginLogo>
-        <span style={{fontSize: '50px'}}>PIZZA FRESH</span>
+        <span style={{ fontSize: "50px" }}>PIZZA FRESH</span>
       </S.BoxLoginLogo>
       <S.BoxLoginForm>
         <input
