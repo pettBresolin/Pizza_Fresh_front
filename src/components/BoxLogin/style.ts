@@ -3,11 +3,11 @@ import styled, { css } from "styled-components";
 export const BoxLogin = styled.section`
   ${({ theme }) => css`
     background: ${theme.colors.baseBg2};
-    width: 330px;
+    width: 600px;
     height: 414px;
     padding: 20px 20px 35px 20px;
     margin: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

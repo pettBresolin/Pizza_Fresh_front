@@ -1,6 +1,5 @@
 import ButtonLarge from "components/ButtonLarge";
 import * as S from "./style";
-import logo from "assets/imgs/logo.png";
 import { HTMLAttributes, useState } from "react";
 
 type BoxLoginType = HTMLAttributes<HTMLDivElement>;
@@ -22,16 +21,12 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
   return (
     <S.BoxLogin>
       <S.BoxLoginLogo>
-        <S.BoxLoginLogoText>
-          <span>Pizza</span>
-          <span>Fresh</span>
-        </S.BoxLoginLogoText>
-        <S.BoxLoginLogoImage src={logo} alt="Logo" />
+        <span style={{fontSize: '50px'}}>PIZZA FRESH</span>
       </S.BoxLoginLogo>
       <S.BoxLoginForm>
         <input
           type="text"
-          placeholder="Nickname"
+          placeholder="Usuário"
           value={nickname}
           onChange={({ target }) => setNickname(target.value)}
         />
@@ -41,7 +36,7 @@ const BoxLogin = ({ onSubmitData, errorMessage }: BoxLoginProps) => {
           value={password}
           onChange={({ target }) => setPassword(target.value)}
         />
-        <ButtonLarge value="Entra" type="button" onClick={handleSubmit} />
+        <ButtonLarge value="ENTRAR" type="button" onClick={handleSubmit} />
       </S.BoxLoginForm>
       {Boolean(errorMessage.length) && (
         <S.BoxLoginError>{errorMessage}</S.BoxLoginError>
